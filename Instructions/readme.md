@@ -1,8 +1,12 @@
 #Joomla (3.4)
 Instructions on how to make advanced templates work in Joomla 3.4:
 
-First go to %joomla%/plugins/editors/tinymce/ and edit the file 'tinymce.php'
+First go to 
+
+%joomla%/plugins/editors/tinymce/ and edit the file 'tinymce.php'
+
 Go to line 539 where it says:
+
 ```$templates .= '],';```
   
 and replace it with:
@@ -17,3 +21,15 @@ $templates .= '], '.$template_replacement_values;
 	
 else{$templates .= '], ';}
 ```
+
+(The contents of the file tinymce_fix.php in this folder)
+
+Then go to
+
+%joomla%/media/editors/tinymce/templates/
+
+and make a file called
+```replace_values.js```
+
+This file will contain the javascript needed to make variables in the TinyMCE template
+You can download the file 'replace_values.js' from this folder for an example of how the structure of the file MUST be to work.
