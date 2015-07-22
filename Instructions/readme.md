@@ -29,7 +29,11 @@ Then go to
 %joomla%/media/editors/tinymce/templates/
 
 and make a file called
-```replace_values.js```
+
+```
+replace_values.js
+```
 
 This file will contain the javascript needed to make variables in the TinyMCE template
 You can download the file 'replace_values.js' from this folder for an example of how the structure of the file MUST be to work.
+
